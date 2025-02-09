@@ -1,4 +1,4 @@
-
+---
 manifest:
   projects:
     - name: zephyr
@@ -7,11 +7,12 @@ manifest:
       west-commands: scripts/west-commands.yml
       import:
         name-allowlist:
-          - mbedtls
-          - zcbor
-          - hal_stm32
           - cmsis
+          - hal_stm32
+          - zcbor
+          - zephyr
 
+#         - mbedtls
 #         - trusted-firmware-m
 #         - tinycrypt
 #         - picolibc
@@ -23,6 +24,4 @@ manifest:
 #         - fatfs
 #         - hal_st
 #         - cmsis
-
-
 
