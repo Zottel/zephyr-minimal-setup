@@ -1,0 +1,28 @@
+
+manifest:
+  projects:
+    - name: zephyr
+      revision: v3.7.1
+      url: https://github.com/zephyrproject-rtos/zephyr
+      west-commands: scripts/west-commands.yml
+      import:
+        name-allowlist:
+          - mbedtls
+          - zcbor
+          - hal_stm32
+          - cmsis
+
+#         - trusted-firmware-m
+#         - tinycrypt
+#         - picolibc
+#         - mcuboot
+#         - lvgl
+#         - littlefs
+#         - hal_rpi_pico
+#         - hal_espressif
+#         - fatfs
+#         - hal_st
+#         - cmsis
+
+
+

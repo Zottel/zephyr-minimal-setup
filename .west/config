@@ -1,0 +1,21 @@
+
+[color]
+ui = true
+
+
+[update]
+narrow = true
+
+
+
+[manifest]
+path = app
+file = west.yml
+
+# comma-separated
+#project-filter = -hal_*,+hal_stm32
+
+[build]
+board = nucleo_h563zi
+
+
