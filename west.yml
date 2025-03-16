@@ -5,12 +5,16 @@ manifest:
       revision: v3.7.1
       url: https://github.com/zephyrproject-rtos/zephyr
       west-commands: scripts/west-commands.yml
+      clone-depth: 1
+
       import:
+        path-prefix: zephyr
         name-allowlist:
+          - zephyr
+
           - cmsis
           - hal_stm32
           - zcbor
-          - zephyr
 
 #         - mbedtls
 #         - trusted-firmware-m
@@ -23,5 +27,4 @@ manifest:
 #         - hal_espressif
 #         - fatfs
 #         - hal_st
-#         - cmsis
 

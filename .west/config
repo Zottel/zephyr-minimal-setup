@@ -2,14 +2,11 @@
 [color]
 ui = true
 
-
 [update]
 narrow = true
 
-
-
 [manifest]
-path = app
+path = .
 file = west.yml
 
 # comma-separated
@@ -17,5 +14,9 @@ file = west.yml
 
 [build]
 board = nucleo_h563zi
+[zephyr]
+base = zephyr/zephyr
 
+[runners]
+flash-runner = pyocd
 
