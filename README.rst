@@ -34,6 +34,6 @@ Then compile with::
 
   # Not working: export SYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
 
-  west build app -DSYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
-  west flash --runner pyocd
+  west build hello_world -DSYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
+  west flash --build-dir ./build/nucleo_h563zi/hello_world --runner pyocd
 
