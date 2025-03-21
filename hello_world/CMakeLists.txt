@@ -2,9 +2,14 @@
 
 cmake_minimum_required(VERSION 3.20.0)
 
-find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(hello_world)
+# Some common Zephyr settings.
+# We have to apply those before we load the Zephyr package.
+include("../board_settings.cmake")
 
+find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
+
+# Application configuration.
+project(hello_world)
 target_sources(app PRIVATE src/main.cc)
 
 # Just some demo variables

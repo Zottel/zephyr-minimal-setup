@@ -9,9 +9,9 @@ path = .
 file = west.yml
 
 [build]
-board = nucleo_h563zi
+board_warn = False
 sysbuild = False
-dir-fmt = build/{board}/{app}
+dir-fmt = build/{app}
 
 [zephyr]
 base = zephyr/zephyr

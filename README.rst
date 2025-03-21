@@ -6,6 +6,9 @@ Since a full Zephyr setup can be a real beast, I tried to set up a minimal
 development environment.  Here I use only the STM32 hal for the nucleo_h563zi
 board.
 
+Quick Start
+===========
+
 Set up System with::
 
   # Debian packages:
@@ -33,7 +36,19 @@ Then compile with::
   export CROSS_COMPILE=/usr/bin/arm-none-eabi-
 
   # Not working: export SYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
+  # It will probably use the corredt SYSROOT_DIR per default, but you may try:
+  #west build hello_world -DSYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
 
-  west build hello_world -DSYSROOT_DIR=/usr/lib/arm-none-eabi/newlib/
-  west flash --build-dir ./build/nucleo_h563zi/hello_world --runner pyocd
+  west build hello_world
+  # Then, or instead:
+  west build hello_world --target flash
+
+
+Technical Details
+=================
+
+This repository contains the configuration for a west workspace in
+.west/config and west.yml.  For now we use module already integrated in the
+vanilla Zephyr manifest, so our west.yml includes Zephyr and allowlists
+the modules we actually need.
 
